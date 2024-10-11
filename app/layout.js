@@ -20,6 +20,8 @@ export const metadata = {
 // Components
 import Navbar from "./components/Navbar";
 import Main from "./components/Main";
+import Voting from "./components/Voting";
+import ContestantCard from "./components/ContestantCard";
 
 export default function RootLayout({ children }) {
   return (
@@ -29,6 +31,8 @@ export default function RootLayout({ children }) {
       >
         <Navbar />
         <Main />
+        <ContestantCard />
+        <Voting />
         {children}
       </body>
     </html>
