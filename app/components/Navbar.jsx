@@ -1,5 +1,6 @@
 import React from "react";
 import { Button } from "@mui/material";
+import { SignedIn, SignedOut, UserButton } from "@clerk/nextjs";
 
 const Navbar = () => {
   return (
@@ -46,12 +47,17 @@ const Navbar = () => {
       </div>
 
       <div className="navbar-end">
-        <Button className="butn1" color="inherit" href="/sign-in">
-          Sign in
-          <div className="arrow-wrapper">
-            <div className="arrow"></div>
-          </div>
-        </Button>
+        <SignedOut>
+          <Button className="butn1" color="inherit" href="/sign-in">
+            Sign in
+            <div className="arrow-wrapper">
+              <div className="arrow"></div>
+            </div>
+          </Button>
+        </SignedOut>
+        <SignedIn>
+          <UserButton />
+        </SignedIn>
       </div>
     </div>
   );

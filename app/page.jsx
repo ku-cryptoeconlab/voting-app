@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Button, Container } from "@mui/material";
 
-const Main = () => {
+export default function Home() {
   return (
     <Container>
       <Box id="home" className="w-full h-screen text-center relative">
@@ -30,6 +30,4 @@ const Main = () => {
       </Box>
     </Container>
   );
-};
-
-export default Main;
+}
